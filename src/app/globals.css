@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body { height: 100%; }
+body {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+  background-attachment: fixed;
+  color: #0f172a;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl border border-orange-100 shadow-sm transition;
+  }
+  .card-hover { @apply hover:shadow-md hover:border-brand-200; }
+  .label { @apply text-xs font-semibold uppercase tracking-wide text-slate-600; }
+  .input-base {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm bg-white
+      focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+      transition;
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, #FB923C 0%, #EA580C 50%, #C2410C 100%);
+  }
+  .gradient-brand-soft {
+    background: linear-gradient(135deg, #FFEDD5 0%, #FED7AA 100%);
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #FDBA74; border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.3s ease-out; }
