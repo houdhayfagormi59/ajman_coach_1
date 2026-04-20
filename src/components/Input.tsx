@@ -2,10 +2,7 @@
 import { InputHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
-}
+interface Props extends InputHTMLAttributes<HTMLInputElement> { label?: string; error?: string; }
 
 const Input = forwardRef<HTMLInputElement, Props>(({ label, error, className, ...props }, ref) => (
   <div className="flex flex-col gap-1.5">

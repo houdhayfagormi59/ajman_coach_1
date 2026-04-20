@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
@@ -51,7 +52,7 @@ export default async function PlayerDetail({ params }: { params: { id: string } 
                 <Badge variant={player.status}>{player.status}</Badge>
               </div>
               <div className="text-sm text-slate-600 mt-1">
-                <span className="font-semibold">{player.position}</span> · {player.team}
+                <span className="font-semibold">{player.position}</span> · {player.age_group || 'N/A'}
                 {player.jersey_number ? ` · #${player.jersey_number}` : ''}
                 {` · Age ${ageFromDOB(player.date_of_birth)}`}
                 {player.nationality ? ` · ${player.nationality}` : ''}

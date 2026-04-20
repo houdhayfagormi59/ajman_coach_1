@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import RecruitmentForm from '@/components/RecruitmentForm';
 
 export default function NewScoutingPage() {

@@ -70,7 +70,7 @@ export function PlayerReport({
           </View>
           <Text style={styles.title}>Player Report</Text>
           <Text style={styles.subtitle}>
-            {player.first_name} {player.last_name} · {player.position} · {player.team}
+            {player.first_name} {player.last_name} · {player.position} · {player.age_group || 'N/A'}
           </Text>
           <Text style={styles.subtitle}>Prepared by {coachName} · {generatedAt}</Text>
         </View>
@@ -85,7 +85,7 @@ export function PlayerReport({
           </View>
           <View style={styles.col}>
             <View style={styles.row}><Text style={styles.label}>Position</Text><Text style={styles.value}>{player.position}</Text></View>
-            <View style={styles.row}><Text style={styles.label}>Team</Text><Text style={styles.value}>{player.team}</Text></View>
+            <View style={styles.row}><Text style={styles.label}>Team</Text><Text style={styles.value}>{player.age_group || 'N/A'}</Text></View>
             <View style={styles.row}><Text style={styles.label}>Jersey</Text><Text style={styles.value}>{player.jersey_number ?? '—'}</Text></View>
             <View style={styles.row}><Text style={styles.label}>Status</Text><Text style={styles.value}>{player.status.toUpperCase()}</Text></View>
           </View>
